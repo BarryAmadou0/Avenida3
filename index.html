@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="css/styles3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="logo">Avenida</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <h1>Welkom bij Avenida</h1>
+    <p>Geniet van authentieke Italiaanse gerechten in een gezellige sfeer</p>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>Menu</h2>
+    <div class="menu-categories">
+      <button class="category-btn active" data-category="voorgerechten">Voorgerechten</button>
+      <button class="category-btn" data-category="salades">Salades</button>
+      <button class="category-btn" data-category="soep">Soep</button>
+      <button class="category-btn" data-category="pizza">Pizza's</button>
+      <button class="category-btn" data-category="kinderschotel">Kinderschotel's</button>
+      <button class="category-btn" data-category="hoofdgerechten">Warme schotel's</button>
+      <button class="category-btn" data-category="pita">Pita broodjes</button>
+      <button class="category-btn" data-category="pasta">Pasta's&Lasagna</button>
+      <button class="category-btn" data-category="desserts">Desserts</button>
+      <button class="category-btn" data-category="dranken">Dranken</button>
+      <button class="category-btn" data-category="extra">Extra's</button>
+    </div>
+
+    <div class="menu-items" id="menu-items-container">
+      <!-- Hier worden de menu-items geladen via JavaScript -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Adres: Turnhoutsebaan 9, 2140 borgerhout</p>
+    <p>Telefoon: 0486719226</p>
+    <p>Open: Dinsdag - Zondag, 16:00 - 00:00</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Avenida. Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="js/js3.js"></script>
+</body>
+</html>
