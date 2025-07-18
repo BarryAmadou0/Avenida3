@@ -131,6 +131,7 @@ h2::after {
     color: white;
 }
 
+
 /* Slideshow styles */
 .slideshow-container {
     position: relative;
@@ -478,6 +479,8 @@ nav a:hover {
         margin: 2rem 0 1rem 0;
     }
 }
+
+
 
 
 
