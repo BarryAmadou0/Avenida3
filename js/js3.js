@@ -43,7 +43,7 @@ const menuData = {
             name:"Nicoise",
             description:"Gemende sla met tonijn,ansjovis en olijven",
             price:11.00,
-            image:"../Media/AvenidaSaladeNisCoise.jpeg",
+            image:"../Media/AvenidasSaladeNisCoiseEdit.png",
         },
         {
             name:"Mediterraanse salade",
@@ -189,7 +189,7 @@ const menuData = {
             name: "Kip special",
             description: "kip, ui, paprika, mais en pikante saus",
             price: 15.50,
-            image: "../Media/AvenidaKipSpecial.jpeg"
+            image: "../Media/AvenidaKipSepcial2Edit.png"
         },
         {
             name: "Kip hawai",
@@ -201,7 +201,7 @@ const menuData = {
             name: "Kipfilet",
             description: "met Currysaus, Pepersaus of Champignonsaus",
             price: 15.50,
-            image: "../Media/AvenidaKipCurry.jpeg"
+            image: "../Media/AvenidaKipfilet2Edit.png"
         },
         {
             name:"Kipfilet met Avenidas saus",
@@ -255,7 +255,7 @@ const menuData = {
             name:"Spieringkotelet",
             description:"",
             price:25.00,
-            image:"../Media/AvenidaSpareRibs2.jpeg",
+            image:"../Media/AvenidaSteakEdit.jpeg",
         },
         {
             name:"Vis natuur",
@@ -285,7 +285,7 @@ const menuData = {
             name:"Zalm",
             description:"",
             price:19.00,
-            image:"../Media/AvenidaZalmSchotel.jpeg",
+            image:"../Media/AvenidaZalmEdit.png",
         },
         {
             name:"Avenidaschotel",
@@ -380,7 +380,7 @@ const menuData = {
             name:"Arabiata",
             description:"Pikante tomatensaus en ui",
             price:12.00,
-            image:"../Media/AvenidaPastaArabiata.jpeg",
+            image:"../Media/AvenidaPastaAriabataEdit.png",
         },
         {
             name:"Pollo",
@@ -440,7 +440,7 @@ const menuData = {
             name:"Lasagna Bolognese",
             description:"Ui, paparika en gehakt",
             price:15.50,
-            image:"../Media/AvenidaLasagna.jpeg",
+            image:"../Media/AvenidaLasagnaEdit.png",
         },
         {
             name:"Lasagna Cannelloni",
@@ -525,7 +525,7 @@ const menuData = {
                 name:"Saint sébastian cake",
                 description:"",
                 price:9.00,
-                image:"../Media/AvenidaTaartSanSebestian.jpeg",
+                image:"../Media/AvenidaSebaTarrtEdit.jpeg",
             },
             {
                 name:"Bosbessen",
@@ -581,7 +581,7 @@ const menuData = {
                 name:"Creme brulee",
                 description:"",
                 price:6.00,
-                image:"../Media/AvenidaCremeBrulee.jpeg",
+                image:"../Media/AvenidaCremeBruleeEdit.jpeg",
             },
             {
                 name:"Banana split ijs",
@@ -836,10 +836,29 @@ const categoryIcons = {
     dranken: "🍹",
     extra: "➕"
 };
+// toon notitties
+function showCategoryNotice(category) {
+    // Verwijder eerst eventuele bestaande notitie
+    const existingNotice = document.querySelector('.category-notice');
+    if (existingNotice) {
+        existingNotice.remove();
+    }
+
+    // Voeg notitie toe voor hoofdgerechten
+    if (category === 'hoofdgerechten') {
+        const notice = document.createElement('div');
+        notice.className = 'category-notice';
+        notice.innerHTML = '<p>De schotels worden gereserveerd met een salade en rijst/friet/puree/aardappelkroketjes of aardappelschijfjes</p>';
+        menuContainer.prepend(notice); // Voeg toe aan het begin van de container
+    }
+}
 
 // Laad menu items met slideshow voor items met foto's
 function loadMenuItems(category) {
     menuContainer.innerHTML = '';
+
+    // Toon categorie melding indien nodig
+    showCategoryNotice(category);
 
     // Geneste categorie (bijv. desserts)
     if (typeof menuData[category] === 'object' && !Array.isArray(menuData[category])) {

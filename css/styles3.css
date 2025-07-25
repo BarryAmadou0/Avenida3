@@ -472,6 +472,21 @@ nav a:hover {
     border-radius: 3px;
 }
 
+.category-notice {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e67e22;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Voor mobiel */
 @media (max-width: 768px) {
     .subcategory-title {
